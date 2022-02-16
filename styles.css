@@ -1,0 +1,123 @@
+/* CSS RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font-family: serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* APP CSS */
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #adfaff;
+}
+
+.content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1.5px solid #000;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+#form {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-top: 12px;
+}
+
+legend {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  border: 1.5px solid #000;
+  width: 300px;
+  height: 36px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+}
+
+input:not(:first-child) {
+  margin-top: 12px;
+}
+
+.submitButton {
+  height: 36px;
+  width: 150px;
+  border-radius: 8px;
+  border: 1.5px solid #000;
+  margin-top: 16px;
+  background-color: #573dff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  background-color: #361ed4;
+}
+
+.resultWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  padding-top: 8px;
+  margin-bottom:12px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+span {
+  margin-left: 8px;
+  font-size: 24px;
+}
+
+.alert {
+  max-width: 280px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #f22;
+}

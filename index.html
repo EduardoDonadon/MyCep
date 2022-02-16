@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>MyCep</title>
+</head>
+<body>
+  <div id="container">
+    <div class="content">
+      <h1 class="title">MyCep🔎</h1>
+
+      <form id="form">
+        <legend>Preencha os dados</legend>
+
+        <div class="inputWrapper">
+          <input type="text" id="state" placeholder="Digite a singla do estado. ex: BA">
+          <input type="text" id="city" placeholder="Digite sua cidade. ex: Salvador">
+          <input type="text" id="street" placeholder="Digite sua rua. ex: Rubem Berta">
+        </div>
+
+        <button class="submitButton" type="submit">
+          BUSCAR CEP
+        </button>
+      </form>
+
+      <div class="resultWrapper">
+        <h3>CEP:</h3>
+        <span id="cepSpan"></span>
+      </div>
+
+      <span class="alert">Caso tenha mais de uma rua com o mesmo nome, o cep retornado pode estar errado</span>
+    </div>
+  </div>
+
+  <script src="./main.js" />
+</body>
+</html>
+
