@@ -3,6 +3,12 @@ async function api(state, city, street) {
     const response = await fetch(`https://viacep.com.br/ws/${state}/${city}/${street}/json/`);
     const formattedResponse = await response.json();
     
+    if (formattedResponse.length === 0) {
+      return {
+        cep: "dados inválidos"
+      } 
+    }
+
     return formattedResponse[0];
   } catch (error) {
     return {
@@ -23,9 +29,9 @@ form.addEventListener('submit', async (e) => {
 
   if(!stateInput.value || !cityInput.value || !streetInput.value) return;
 
-  const address = await api(stateInput.value, cityInput.value, streetInput.value);
+  const { cep } = await api(stateInput.value, cityInput.value, streetInput.value);
 
-  if(address.cep) {
-    cepSpan.innerHTML = address.cep;
+  if(cep) {
+    cepSpan.innerHTML = cep;
   }
 })
