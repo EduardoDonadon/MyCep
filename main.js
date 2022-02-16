@@ -26,8 +26,11 @@ const cepSpan = document.getElementById('cepSpan');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   cepSpan.innerHTML = 'carregando...';
-
-  if(!stateInput.value || !cityInput.value || !streetInput.value) return;
+  
+  if(!stateInput.value || !cityInput.value || !streetInput.value) {
+    cepSpan.innerHTML = '';
+    return;
+  };
 
   const { cep } = await api(stateInput.value, cityInput.value, streetInput.value);
 
